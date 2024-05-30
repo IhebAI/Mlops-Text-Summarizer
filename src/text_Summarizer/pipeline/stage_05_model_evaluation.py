@@ -1,5 +1,5 @@
-from textSummarizer.components.model_evaluation import ModelEvaluation
-from textSummarizer.config.configuration import ConfigurationManager
+from text_Summarizer.components.model_evaluation import ModelEvaluation
+from text_Summarizer.config.configuration import ConfigurationManager
 
 
 class ModelEvaluationTrainingPipeline:

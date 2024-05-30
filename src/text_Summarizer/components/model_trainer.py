@@ -1,6 +1,6 @@
 import os
 
-from textSummarizer.entity import ModelTrainerConfig
+from text_Summarizer.entity import ModelTrainerConfig
 from transformers import TrainingArguments, Trainer
 from transformers import DataCollatorForSeq2Seq
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer

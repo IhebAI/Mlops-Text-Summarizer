@@ -1,10 +1,10 @@
-from textSummarizer.components.model_trainer import ModelTrainer
-from textSummarizer.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
-from textSummarizer.logging import logger
-from textSummarizer.pipeline.stage_02_data_validation import DataValidationTrainingPipeline
-from textSummarizer.pipeline.stage_03_data_transformation import DataTransformationTrainingPipeline
-from textSummarizer.pipeline.stage_04_model_trainer import ModelTrainerTrainingPipline
-from textSummarizer.pipeline.stage_05_model_evaluation import ModelEvaluationTrainingPipeline
+from text_Summarizer.components.model_trainer import ModelTrainer
+from text_Summarizer.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
+from text_Summarizer.logging import logger
+from text_Summarizer.pipeline.stage_02_data_validation import DataValidationTrainingPipeline
+from text_Summarizer.pipeline.stage_03_data_transformation import DataTransformationTrainingPipeline
+from text_Summarizer.pipeline.stage_04_model_trainer import ModelTrainerTrainingPipline
+from text_Summarizer.pipeline.stage_05_model_evaluation import ModelEvaluationTrainingPipeline
 
 # Data Ingestion Stage
 STAGE_NAME = "Data Ingestion stage"

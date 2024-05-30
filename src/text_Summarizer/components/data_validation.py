@@ -1,5 +1,5 @@
-from textSummarizer.entity import DataValidationConfig
-from textSummarizer.logging import logger
+from text_Summarizer.entity import DataValidationConfig
+from text_Summarizer.logging import logger
 import os
 import pandas as pd
 

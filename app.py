@@ -4,7 +4,7 @@ import os
 from starlette.responses import RedirectResponse
 from fastapi.responses import Response
 
-from textSummarizer.pipeline.prediction import PredictionPipeline
+from text_Summarizer.pipeline.prediction import PredictionPipeline
 
 text:str = "What is Text Summarization?"
 

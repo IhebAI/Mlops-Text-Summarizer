@@ -1,6 +1,6 @@
 
-from textSummarizer.config.configuration import ConfigurationManager
-from textSummarizer.components.data_validation import DataValidation
+from text_Summarizer.config.configuration import ConfigurationManager
+from text_Summarizer.components.data_validation import DataValidation
 
 
 class DataValidationTrainingPipeline:

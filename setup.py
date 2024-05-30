@@ -8,7 +8,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "Mlops-Text-Summarizer"
 AUTHOR_USER_NAME = "IhebAI"
-SRC_REPO = "textSummarizer"
+SRC_REPO = "text_Summarizer"
 AUTHOR_EMAIL = "iheb.aamrii@gmail.com"
 
 

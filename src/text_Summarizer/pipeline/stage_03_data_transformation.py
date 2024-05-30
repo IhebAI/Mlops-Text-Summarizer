@@ -1,5 +1,5 @@
-from textSummarizer.config.configuration import ConfigurationManager
-from textSummarizer.components.data_transformation import DataTransformation
+from text_Summarizer.config.configuration import ConfigurationManager
+from text_Summarizer.components.data_transformation import DataTransformation
 
 
 class DataTransformationTrainingPipeline:
