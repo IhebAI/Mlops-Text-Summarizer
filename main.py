@@ -1,10 +1,15 @@
 from text_Summarizer.components.model_trainer import ModelTrainer
-from text_Summarizer.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 from text_Summarizer.logging import logger
-from text_Summarizer.pipeline.stage_02_data_validation import DataValidationTrainingPipeline
-from text_Summarizer.pipeline.stage_03_data_transformation import DataTransformationTrainingPipeline
-from text_Summarizer.pipeline.stage_04_model_trainer import ModelTrainerTrainingPipline
-from text_Summarizer.pipeline.stage_05_model_evaluation import ModelEvaluationTrainingPipeline
+from text_Summarizer.pipeline.stage_01_data_ingestion import \
+    DataIngestionTrainingPipeline
+from text_Summarizer.pipeline.stage_02_data_validation import \
+    DataValidationTrainingPipeline
+from text_Summarizer.pipeline.stage_03_data_transformation import \
+    DataTransformationTrainingPipeline
+from text_Summarizer.pipeline.stage_04_model_trainer import \
+    ModelTrainerTrainingPipline
+from text_Summarizer.pipeline.stage_05_model_evaluation import \
+    ModelEvaluationTrainingPipeline
 
 # Data Ingestion Stage
 STAGE_NAME = "Data Ingestion stage"
@@ -36,13 +41,15 @@ if status:
         logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
         data_transformation = DataTransformationTrainingPipeline()
         data_transformation.main()
-        logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+        logger.info(
+            f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
     except Exception as e:
         logger.exception(e)
         raise e
 else:
     logger.error(
-        f">>>>>> stage Data Transformation stage Skipped due to failed data validation. <<<<<<\n\nx==========x")
+        f">>>>>> stage Data Transformation stage Skipped due to failed data validation. <<<<<<\n\nx==========x"
+    )
 
 # Model trainer stage
 STAGE_NAME = "Model trainer stage"

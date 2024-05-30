@@ -1,14 +1,15 @@
-from text_Summarizer.entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, \
-    ModelTrainerConfig, ModelEvaluationConfig
-from text_Summarizer.utils.common import read_yaml, create_directories
 from text_Summarizer.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
+from text_Summarizer.entity import (DataIngestionConfig,
+                                    DataTransformationConfig,
+                                    DataValidationConfig,
+                                    ModelEvaluationConfig, ModelTrainerConfig)
+from text_Summarizer.utils.common import create_directories, read_yaml
 
 
 class ConfigurationManager:
     def __init__(
-            self,
-            config_filepath=CONFIG_FILE_PATH,
-            params_filepath=PARAMS_FILE_PATH):
+        self, config_filepath=CONFIG_FILE_PATH, params_filepath=PARAMS_FILE_PATH
+    ):
         print(type(config_filepath))
         print(config_filepath)
         self.config = read_yaml(config_filepath)
@@ -25,7 +26,7 @@ class ConfigurationManager:
             root_dir=config.root_dir,
             source_URL=config.source_URL,
             local_data_file=config.local_data_file,
-            unzip_dir=config.unzip_dir
+            unzip_dir=config.unzip_dir,
         )
 
         return data_ingestion_config
@@ -55,7 +56,7 @@ class ConfigurationManager:
         data_transformation_config = DataTransformationConfig(
             root_dir=config.root_dir,
             data_path=config.data_path,
-            tokenizer_name=config.tokenizer_name
+            tokenizer_name=config.tokenizer_name,
         )
 
         return data_transformation_config
@@ -78,8 +79,7 @@ class ConfigurationManager:
             evaluation_strategy=params.evaluation_strategy,
             eval_steps=params.eval_steps,
             save_steps=params.save_steps,
-            gradient_accumulation_steps=params.gradient_accumulation_steps
+            gradient_accumulation_steps=params.gradient_accumulation_steps,
         )
 
         return model_trainer_config
-

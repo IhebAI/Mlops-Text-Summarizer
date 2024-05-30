@@ -1,6 +1,5 @@
-
-from text_Summarizer.config.configuration import ConfigurationManager
 from text_Summarizer.components.data_validation import DataValidation
+from text_Summarizer.config.configuration import ConfigurationManager
 
 
 class DataValidationTrainingPipeline:
@@ -19,4 +18,3 @@ class DataValidationTrainingPipeline:
         data_validation.check_data_consistency()
         data_validation.check_data_quantity()
         return data_validation.read_status()
-

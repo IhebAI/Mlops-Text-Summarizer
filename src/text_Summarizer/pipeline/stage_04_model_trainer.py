@@ -1,6 +1,6 @@
-from text_Summarizer.config.configuration import ConfigurationManager
 from text_Summarizer.components.data_ingestion import DataIngestion
 from text_Summarizer.components.model_trainer import ModelTrainer
+from text_Summarizer.config.configuration import ConfigurationManager
 
 
 class ModelTrainerTrainingPipline:
