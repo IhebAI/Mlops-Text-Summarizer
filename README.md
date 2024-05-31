@@ -1,5 +1,46 @@
 # End to end Text-Summarizer-Project
 
+# Project Description
+
+This project focuses on fine-tuning a pre-trained PEGASUS model to create a text summarization tool using the SAMSUM dataset. The SAMSUM dataset, which includes dialogues and their summaries, is ideal for training and evaluating models that summarize conversations. The parameters used in the project are for demonstration purposes, and you can adjust them as needed.
+
+## Machine Learning Pipeline Components
+
+1. **Data Ingestion:** We begin by loading the SAMSUM dataset, which contains dialogues and their corresponding summaries.
+
+2. **Data Validation:** We ensure the quality and consistency of the data by performing several checks:
+
+    - **Validate All Files Exist - DataDict:** Confirm that all required dataset dictionary files are present.
+    - **Validate All Files Exist - CSV:** Verify that all necessary CSV files are available.
+    - **Validate Schema - CSV:** Check that all required columns are present in the CSV files.
+    - **Validate Data Types:** Ensure that the data types in the CSV files match the expected types.
+    - **Check Missing Values:** Identify any missing values in critical columns.
+    - **Check Data Consistency:** Detect duplicate entries in the data.
+    - **Check Data Quantity:** Verify that the amount of data meets the minimum requirements.
+
+3. **Data Transformation:** We preprocess the dataset, which includes tokenizing the text and formatting it correctly for training the summarization model.
+
+4. **Model Training:** We fine-tune the pre-trained PEGASUS model using our prepared dataset. This step adapts the model specifically for summarizing dialogues.
+
+5. **Model Evaluation:** After training, we evaluate the model's performance using the ROUGE metric. ROUGE measures how well the model-generated summaries match the human-written ones.
+
+6. **Prediction Service:** To make our model accessible, we set up an API using FastAPI. This API includes a `/train` endpoint to start the training process and a `/predict` endpoint for generating summaries. This setup allows us to easily integrate the summarization functionality into various applications and services.
+
+7. **Model Saving and Loading:** Finally, we save the fine-tuned model and its tokenizer for future use. This ensures that the model can be reloaded and used without needing to retrain it.
+
+## Technologies Used
+
+- **Programming Language:** Python
+- **Frameworks/Libraries:** PyTorch, FastAPI, Hugging Face Transformers, Pandas, NLTK, tqdm
+- **Base model**: google/pegasus-cnn_dailymail
+- **Version Control:** Git
+- **Continuous Integration:** GitHub Actions
+- **Deployment:** Docker, AWS EC2, AWS ECR
+- **Data Handling:** Hugging Face Datasets
+- **Model Evaluation:** ROUGE Score
+- **API Development:** FastAPI
+
+
 ## Workflows
 
 1. Update config.yaml
