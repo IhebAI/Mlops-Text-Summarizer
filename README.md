@@ -26,7 +26,6 @@ This project focuses on fine-tuning a pre-trained PEGASUS model to create a text
 
 6. **Prediction Service:** To make our model accessible, we set up an API using FastAPI. This API includes a `/train` endpoint to start the training process and a `/predict` endpoint for generating summaries. This setup allows us to easily integrate the summarization functionality into various applications and services.
 
-7. **Model Saving and Loading:** Finally, we save the fine-tuned model and its tokenizer for future use. This ensures that the model can be reloaded and used without needing to retrain it.
 
 ## Technologies Used
 
