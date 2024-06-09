@@ -1,5 +1,6 @@
 transformers
 transformers[sentencepiece]
+mlflow=2.2.2
 datasets
 sacrebleu
 rouge_score
