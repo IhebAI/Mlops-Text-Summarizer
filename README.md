@@ -94,7 +94,8 @@ Data Scientist
 Email: krishnaik06@gmail.com
 
 ```
-### Use MLflow from DagsHub to connect your project and get your credentials to initialise your working directory. In this project mlflow is used to track: 
+# MLflow
+## Use MLflow from DagsHub to connect your project and get your credentials to initialise your working directory. In this project mlflow is used to track: 
 ### 1. parameters
 ### 2. metrics
 ### 3. register the model
