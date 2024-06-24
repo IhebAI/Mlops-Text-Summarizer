@@ -51,3 +51,5 @@ class ModelEvaluationConfig:
     model_path: Path
     tokenizer_path: Path
     metric_file_name: Path
+    mlflow_uri: str
+    all_params: dict
